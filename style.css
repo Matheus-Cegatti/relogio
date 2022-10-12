@@ -1,19 +1,22 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
 }
 
-body{
+body {
     height: 100vh;
-    background: linear-gradient(75deg, rgba(255,247,233,1) 40%, rgba(95,157,247,1) 78%);
+    background: linear-gradient(75deg, rgba(255, 247, 233, 1) 40%, rgba(95, 157, 247, 1) 78%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .relogio {
     width: 500px;
     height: 500px;
-    background-color: rgba(137,207,253,0.4);
+    background-color: rgba(137, 207, 253, 0.4);
     border-radius: 50%;
     border: 1.5px solid black;
     position: relative;
@@ -28,36 +31,78 @@ body{
     font-weight: 400;
 }
 
-.relogio .number-1{
+.relogio .number-1 {
     transform: rotate(30deg);
 }
-.relogio .number-2{
+
+.relogio .number-2 {
     transform: rotate(60deg);
 }
-.relogio .number-3{
+
+.relogio .number-3 {
     transform: rotate(90deg);
 }
-.relogio .number-4{
+
+.relogio .number-4 {
     transform: rotate(120deg);
 }
-.relogio .number-5{
+
+.relogio .number-5 {
     transform: rotate(150deg);
 }
-.relogio .number-6{
+
+.relogio .number-6 {
     transform: rotate(180deg);
 }
-.relogio .number-7{
+
+.relogio .number-7 {
     transform: rotate(210deg);
 }
-.relogio .number-8{
+
+.relogio .number-8 {
     transform: rotate(240deg);
 }
-.relogio .number-9{
+
+.relogio .number-9 {
     transform: rotate(270deg);
 }
-.relogio .number-10{
+
+.relogio .number-10 {
     transform: rotate(300deg);
 }
-.relogio .number-11{
+
+.relogio .number-11 {
     transform: rotate(330deg);
+}
+
+.relogio .ponteiro {
+    --rotation: 0;
+
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: black;
+    transform: translateX(-50%) rotate(calc(var(--rotation)));
+    transform-origin: bottom;
+    z-index: 10;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.relogio .ponteiro.segundos{
+    width: 3.5px;
+    height: 40%;
+    background-color: #CC3636;
+}
+
+.relogio .ponteiro.minutos {
+    width: 7.5px;
+    height: 33%;
+    background-color: #231955;
+}
+
+.relogio .ponteiro.horas {
+    width: 10px;
+    height: 25%;
+    background-color: #231955;
 }
