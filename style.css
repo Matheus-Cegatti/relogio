@@ -105,18 +105,18 @@ body {
 
 .relogio .ponteiro.segundos{
     width: 3.5px;
-    height: 40%;
+    height: 41%;
     background-color: #CC3636;
 }
 
 .relogio .ponteiro.minutos {
     width: 7.5px;
-    height: 33%;
+    height: 35%;
     background-color: #231955;
 }
 
 .relogio .ponteiro.horas {
     width: 10px;
-    height: 25%;
+    height: 27%;
     background-color: #231955;
 }
